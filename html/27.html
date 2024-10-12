@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        alert("calculara el promedio general de la asignatura ");
+        let parcialA=parseFloat(prompt("Nota Primer Parcial"));
+        let parcialB=parseFloat(prompt("Nota Segundo Parcial"));
+        let parcialC=parseFloat(prompt("Nota Tercer Parcial"));
+        let examenF=parseFloat(prompt("nota examen final"));
+        let trabajoF=parseFloat(prompt("Nota del trabajo final"));
+        function promedio(parcialA,parcialB,parcialC,examenF,trabajoF){
+            let parcial=(parcialA+parcialB+parcialC)/0.55;
+            let examen=examenF*0.3;
+            let trabajo=trabajoF*0.15;
+            let notaP=parcial+examen+trabajo;
+            alert(`el promedio de la materia es de ${notaP}`);
+        }
+        promedio(parcialA,parcialB,parcialC,examenF,trabajoF)
+    </script>
+</body>
+</html>

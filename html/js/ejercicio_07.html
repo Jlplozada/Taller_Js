@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nums=[10,25,99,1,75,3];
+        function elMayor(arreglo) {
+            let mayor=arreglo[0];
+            for (let i = 0; i < arreglo.length; i++) {
+                if (mayor<arreglo[i]) {
+                    mayor=arreglo[i];
+                }                
+            }
+            console.log(`el mayor es ${mayor}`);
+            
+        }
+        elMayor(nums);
+    </script>
+</body>
+</html>

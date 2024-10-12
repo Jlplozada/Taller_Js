@@ -12,7 +12,12 @@
         </ul>
     </div>
     <script>
-        
+        let centígrados=parseFloat(prompt("ingrese la temperatura en centigrados"));
+        function calculo(centigrados) {
+                    let farenheit = (centigrados*9/5)+32;
+                    alert(`la convercion de ${centigrados} °C grados centigrados a ahrenheit es: ${farenheit}°F`);
+        }
+        calculo(centígrados);
     </script>
 </body>
 </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        let palabra =prompt("ingrese palabra");
+        const silabas=(palabra)=>{
+            const contar =/([aeiouáéíóú])(?:[aeiouyáéíóú]?)(?![aeiouáéíóú])/gi;
+            const cantidad=palabra.match(contar);
+            console.log(cantidad.length);
+            
+        }
+        silabas(palabra);
+    </script> -->
+    <script>
+          let palabra =prompt("ingrese palabra");
+        const silabas=(palabra)=>{
+            const contar =/[aeiou]/gi;
+            const cantidad=palabra.match(contar);
+            console.log(cantidad);
+        }
+        silabas(palabra);
+    </script>
+</body>
+</html>
