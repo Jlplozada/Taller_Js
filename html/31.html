@@ -13,15 +13,16 @@
         </ul>
     </div>
     <script>
-        let radio =parseFloat(prompt("ingrese el radio del cilindro"));
-        let altura =parseFloat(prompt("ingrese la altura del radio"));
-        function calculo(r,a) {
-            let area=2*Math.PI*r*(r+h);
-            let velumen=Math.PI*r**2*a;
-            alert(`el area dle cilindro es:${area}
-            el volumen del cilindro es ${volumen}`);
+        function distanciaEntrePuntos(p1, p2) {
+            return Math.sqrt(Math.pow(p2.x - p1.x, 2) + Math.pow(p2.y - p1.y, 2));
         }
-        calculo(radio,altura);
+        
+        const punto1 = { x: 2, y: 5 };
+        const punto2 = { x: 8, y: 1 };
+        
+        console.log(`Distancia: ${distanciaEntrePuntos(punto1, punto2).toFixed(2)}`);
+        
     </script>
+    
 </body>
 </html>
