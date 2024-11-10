@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        function calcularInteresBanco() {
+    let saldo = parseFloat(prompt("Ingrese el saldo actual:"));
+    if (saldo >= 0) {
+        let interes = saldo < 100000 ? 0.03 : 0.04;
+        let interesPagado = saldo * interes;
+        let saldoFinal = saldo + interesPagado;
+        alert(`Interés pagado: $${interesPagado.toFixed(2)}\nSaldo final: $${saldoFinal.toFixed(2)}`);
+    } else {
+        alert("Saldo inválido.");
+    }
+}
+calcularInteresBanco();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        function analizarNotas() {
+    let cantidadNotas = parseInt(prompt("Ingrese la cantidad de notas a evaluar:"));
+    let notas = [];
+    let notaMax = -Infinity;
+    let notaMin = Infinity;
+    let cuenta100 = 0;
+    let cuentaA = 0, cuentaB = 0, cuentaC = 0, cuentaD = 0;
+
+    for (let i = 0; i < cantidadNotas; i++) {
+        let nota = parseFloat(prompt(`Ingrese la nota ${i + 1}:`));
+        if (nota >= 1 && nota <= 100) {
+            notas.push(nota);
+            if (nota > notaMax) notaMax = nota;
+            if (nota < notaMin) notaMin = nota;
+            if (nota === 100) cuenta100++;
+            if (nota >= 90) cuentaA++;
+            else if (nota >= 80) cuentaB++;
+            else if (nota >= 70) cuentaC++;
+            else if (nota >= 60) cuentaD++;
+        } else {
+            alert("Nota inválida, debe estar entre 1 y 100.");
+            i--;
+        }
+    }
+    alert(`Nota más alta: ${notaMax}\nNota más baja: ${notaMin}\nCantidad de notas de 100: ${cuenta100}\nNotas A (>=90): ${cuentaA}\nNotas B (>=80 y <90): ${cuentaB}\nNotas C (>=70 y <80): ${cuentaC}\nNotas D (>=60 y <70): ${cuentaD}`);
+}
+analizarNotas();
+
+    </script>
+</body>
+</html>

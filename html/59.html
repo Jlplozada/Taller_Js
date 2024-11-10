@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        function seleccionBasquetbol() {
+    let edad = parseInt(prompt("Ingrese la edad del postulante:"));
+    let estatura = parseInt(prompt("Ingrese la estatura en cm:"));
+    let peso = parseInt(prompt("Ingrese el peso en kg:"));
+
+    if (edad <= 19 && estatura > 175 && peso >= 75 && peso <= 80) {
+        alert("El postulante cumple con los requisitos.");
+    } else {
+        alert("El postulante no cumple con los requisitos.");
+    }
+}
+seleccionBasquetbol();
+
+    </script>
+</body>
+</html>

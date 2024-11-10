@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+      function validarPin(pin) {
+    return /^[0-9]{4}$|^[0-9]{6}$/.test(pin);
+    }
+    console.log(validarPin("1234"));
+    console.log(validarPin("123456"));
+
+    </script>
+</body>
+</html>

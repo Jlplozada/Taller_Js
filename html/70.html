@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        function pedirContrasena() {
+    let contrasena = "miSecreta123";
+    let intento;
+
+    do {
+        intento = prompt("Ingrese la contraseña:");
+        if (intento === contrasena) {
+            alert("Contraseña correcta.");
+        } else {
+            alert("Contraseña incorrecta, inténtelo de nuevo.");
+        }
+    } while (intento !== contrasena);
+}
+pedirContrasena();
+
+    </script>
+</body>
+</html>

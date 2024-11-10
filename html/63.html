@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        function mostrarAniosCumplidos() {
+    let edad = parseInt(prompt("Ingrese su edad:"));
+    if (edad > 0) {
+        for (let i = 1; i <= edad; i++) {
+            console.log(`Has cumplido ${i} años`);
+        }
+    } else {
+        alert("Edad inválida.");
+    }
+}
+mostrarAniosCumplidos();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        function mostrarImpares() {
+    let numero = parseInt(prompt("Ingrese un número entero positivo:"));
+    if (numero > 0) {
+        let resultado = [];
+        for (let i = 1; i <= numero; i += 2) {
+            resultado.push(i);
+        }
+        alert("Números impares: " + resultado.join(", "));
+    } else {
+        alert("Número inválido.");
+    }
+}
+mostrarImpares();
+
+    </script>
+</body>
+</html>
