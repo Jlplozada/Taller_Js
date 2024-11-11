@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        function calcularCompra() {
+    let totalProductos = 0;
+    for (let i = 1; i <= 5; i++) {
+        let precio = parseFloat(prompt(`Ingrese el precio del producto ${i}:`));
+        if (precio > 0) {
+            totalProductos += precio;
+        } else {
+            alert("Precio inválido. Inténtelo de nuevo.");
+            i--;
+        }
+    }
+    let iva = totalProductos * 0.19;
+    let totalCompra = totalProductos + iva;
+    alert(`Subtotal: $${totalProductos.toFixed(2)}\nIVA: $${iva.toFixed(2)}\nTotal: $${totalCompra.toFixed(2)}`);
+}
+calcularCompra();
+
+    </script>
+</body>
+</html>

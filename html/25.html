@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        let vp=parseFloat(prompt("ingrese el valor del producto"));
+        function descuento(vp){
+            let totalcosto=vp-(vp*0.1);
+            alert(`el valor del producto es: ${vp}
+            el descuento es del 10% para un total de: ${totalcosto}
+            `);
+        }
+        descuento(vp);
+    </script>
+</body>
+</html>

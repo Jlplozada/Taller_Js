@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        function esPrimo() {
+    let numero = parseInt(prompt("Ingrese un número entero:"));
+
+    if (numero > 1) {
+        let esPrimo = true;
+        for (let i = 2; i <= Math.sqrt(numero); i++) {
+            if (numero % i === 0) {
+                esPrimo = false;
+                break;
+            }
+        }
+        alert(`El número ${numero} ${esPrimo ? "es primo" : "no es primo"}.`);
+    } else {
+        alert("El número debe ser mayor que 1.");
+    }
+}
+esPrimo();
+
+    </script>
+</body>
+</html>

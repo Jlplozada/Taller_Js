@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        function calcularVentaTotal() {
+    let precioLibros = 10000;
+    let precioCuadernos = 7550;
+    let precioLapiceros = 5550;
+
+    let cantidadLibros = parseInt(prompt("Ingrese la cantidad de libros vendidos:"));
+    let cantidadCuadernos = parseInt(prompt("Ingrese la cantidad de cuadernos vendidos:"));
+    let cantidadLapiceros = parseInt(prompt("Ingrese la cantidad de lapiceros vendidos:"));
+
+    if (cantidadLibros >= 0 && cantidadCuadernos >= 0 && cantidadLapiceros >= 0) {
+        let total = (cantidadLibros * precioLibros) + (cantidadCuadernos * precioCuadernos) + (cantidadLapiceros * precioLapiceros);
+        alert("El monto total de la venta es: $" + total);
+    } else {
+        alert("Valores de cantidad inválidos.");
+    }
+}
+calcularVentaTotal();
+
+    </script>
+</body>
+</html>

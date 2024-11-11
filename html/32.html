@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        const productosCompra = [
+            { nombre: "Camiseta", precio: 150 },
+            { nombre: "Zapatillas", precio: 250 },
+            { nombre: "Reloj", precio: 450 },
+            { nombre: "Pantalones", precio: 300 },
+            { nombre: "Gorra", precio: 100 }
+        ];
+        
+        function aplicarDescuento(precio, descuento) {
+            return precio * (1 - descuento / 100);
+        }
+        
+        function procesarCompra(productos) {
+            return productos.map((producto, i) => {
+                const descuento = i < 2 ? 5 : i > 2 ? 2 : 0;
+                const precioConDescuento = aplicarDescuento(producto.precio, descuento);
+                return { ...producto, precioConDescuento };
+            });
+        }
+        
+        const compraProcesada = procesarCompra(productosCompra);
+        const total = compraProcesada.reduce((sum, producto) => sum + producto.precioConDescuento, 0);
+        
+        console.log("Detalles de la compra:");
+        compraProcesada.forEach(producto => {
+            console.log(`${producto.nombre}: Precio final $${producto.precioConDescuento.toFixed(2)}`);
+        });
+        console.log(`Total: $${total.toFixed(2)}`);
+        
+    </script>
+    
+</body>
+</html>

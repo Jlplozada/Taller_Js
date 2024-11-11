@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        let dividendo,divisor,resultado;
+        try {
+            dividendo=parseFloat(prompt("ingrese el dividendo"));
+            divisor=parseFloat(prompt("ingrese el divisor"));
+            if(divisor===0){
+                throw new Error(`el divisor es ${divisor}, no se puede realizar la divicion`)
+            }
+            resultado=dividendo/divisor;
+            alert(`el resultado de ${dividendo}/ ${divisor}=${resultado}`)
+        } catch (error) {
+            console.error(error.message);
+        }
+    </script>
+</body>
+</html>

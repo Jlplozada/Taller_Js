@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        const PI = Math.PI;
+        
+        function volumenDeposito(radio, altura) {
+            return PI * radio ** 2 * altura * 1000;
+        }
+        
+        function tiempoLlenado(volumen, caudal) {
+            return (volumen / caudal) / 60;
+        }
+        
+        const radio = 3, altura = 4, caudalLlenado = 15;
+        const volumenTotal = volumenDeposito(radio, altura);
+        const tiempoTotal = tiempoLlenado(volumenTotal, caudalLlenado);
+        
+        console.log(`Volumen del depósito: ${volumenTotal.toFixed(2)} litros`);
+        console.log(`Tiempo de llenado: ${tiempoTotal.toFixed(2)} minutos`);
+        
+    </script>
+    
+</body>
+</html>

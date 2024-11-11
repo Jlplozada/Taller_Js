@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        function calcularDescuentoHelado() {
+    let precio = parseFloat(prompt("Ingrese el precio de la compra:"));
+    let tipoMembresia = prompt("Ingrese el tipo de membresía (A, B, C):").toUpperCase();
+
+    let descuento = 0;
+    if (tipoMembresia === 'A') {
+        descuento = 0.10;
+    } else if (tipoMembresia === 'B') {
+        descuento = 0.15;
+    } else if (tipoMembresia === 'C') {
+        descuento = 0.20;
+    } else {
+        alert("Tipo de membresía inválido.");
+        return;
+    }
+
+    let total = precio - (precio * descuento);
+    alert("El total a pagar con descuento es: $" + total.toFixed(2));
+}
+calcularDescuentoHelado();
+
+    </script>
+</body>
+</html>

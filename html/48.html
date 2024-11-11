@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        function calcularArea() {
+    let figura = prompt("Que figura desea calcular? (Escriba T para Triangulo o C para Círculo):").toUpperCase();
+    if (figura === 'T') {
+        let base = parseFloat(prompt("Ingrese la base del triángulo:"));
+        let altura = parseFloat(prompt("Ingrese la altura del triángulo:"));
+        if (base > 0 && altura > 0) {
+            let areaTriangulo = (base * altura) / 2;
+            alert("El área del triángulo es: " + areaTriangulo);
+        } else {
+            alert("Valores inválidos para la base o la altura.");
+        }
+    } else if (figura === 'C') {
+        let radio = parseFloat(prompt("Ingrese el radio del círculo:"));
+        if (radio > 0) {
+            let areaCirculo = Math.PI * Math.pow(radio, 2);
+            alert("El área del círculo es: " + areaCirculo.toFixed(2));
+        } else {
+            alert("Valor inválido para el radio.");
+        }
+    } else {
+        alert("Opción no válida.");
+    }
+}
+calcularArea();
+
+    </script>
+</body>
+</html>

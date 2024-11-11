@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        function media(...numeros){
+            let sum =0;
+            for(let num of numeros){
+                sum +=num;
+            }
+            let media =sum/numeros.length;
+            return media;
+        }
+        let numeros=[];
+        while (true) {
+            let num=parseFloat(prompt(`
+            ingrese el numero 
+            0 para salir
+            `));
+
+            if (num !=0) {
+                numeros.push(num);
+            }else{
+                break;
+            }
+        }
+        let resultado =media(...numeros);
+        alert (resultado);
+    </script>
+</body>
+</html>

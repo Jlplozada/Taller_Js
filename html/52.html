@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        function calcularPagoEmpleado() {
+    let tipoEmpleado = prompt("Ingrese el tipo de empleado (planta/administrativo):").toLowerCase();
+    let horasTrabajadas = parseFloat(prompt("Ingrese el total de horas trabajadas:"));
+
+    if (horasTrabajadas >= 0) {
+        let pagoPorHora = tipoEmpleado === "planta" ? 20000 : tipoEmpleado === "administrativo" ? 10000 : 0;
+        if (pagoPorHora > 0) {
+            let pagoTotal = horasTrabajadas * pagoPorHora;
+            alert("El pago total es: $" + pagoTotal.toFixed(2));
+        } else {
+            alert("Tipo de empleado no válido.");
+        }
+    } else {
+        alert("Horas trabajadas inválidas.");
+    }
+}
+calcularPagoEmpleado();
+
+    </script>
+</body>
+</html>

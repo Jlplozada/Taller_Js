@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+       let a=parseFloat(prompt("A")); 
+       let b=parseFloat(prompt("B")); 
+       let c=parseFloat(prompt("C"));
+       
+       function calculo(a,b,c) {
+        let volumen=(4/3)*Math.pi*a*b*c;
+        alert(`el volumen del elipsoide es${volumen}`);
+       }
+       calculo(a,b,c)
+    </script>
+</body>
+</html>

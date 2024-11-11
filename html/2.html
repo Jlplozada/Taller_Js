@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+      let contrasena ="contrasena12345";
+      while(true){
+        let contraseDos=prompt("ingrese la contraseña");
+        if (/^[a-zA-Z0-9]+$/.test(contrasena)) {
+            if (contraseDos.toLocaleLowerCase()===contrasena.toLocaleLowerCase()) {
+                alert("contraseña correcta");
+                break;
+            } else {
+                alert("contraseña incorrecta, intentelo nuevamente");
+            }
+        } else {
+            alert("por favor, ingrese solo los valores alfanumericos")
+        }
+      }
+    </script>
+</body>
+</html>

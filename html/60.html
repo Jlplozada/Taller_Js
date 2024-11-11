@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        function calcularPagoCursos() {
+    let cursos = parseInt(prompt("Ingrese la cantidad de cursos:"));
+    if (cursos > 0) {
+        let costoPorCurso = cursos < 6 ? 2000000 : 1200000;
+        let totalPago = cursos * costoPorCurso;
+        alert("El total a pagar es: $" + totalPago.toFixed(2));
+    } else {
+        alert("Cantidad de cursos inválida.");
+    }
+}
+calcularPagoCursos();
+
+    </script>
+</body>
+</html>

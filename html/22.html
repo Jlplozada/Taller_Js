@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+       let minutos = parseFloat(prompt("¿cuantos minutos hablo?"));
+       function calculo(m) {
+        const VALORMINUTO=355;
+        const IVA=0.2;
+        let costoTola=m*VALORMINUTO+m*VALORMINUTO*IVA;
+        alert(`el costo de la llamada es: ${costoTola}`);
+       }
+       calculo(minutos); 
+    </script>
+</body>
+</html>

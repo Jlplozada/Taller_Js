@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        let a=parseFloat(prompt("ingrese A"));
+        let b=parseFloat(prompt("ingrese B"));
+        let c=parseFloat(prompt("ingrese C"));
+        function calculo(a,b,c) {
+            let discriminante=b**2-4*a*c;
+            if (discriminante>0) {
+                let x1=(-b+Math.sqrt(discriminante))/(2*a);
+                let x2=(-b-Math.sqrt(discriminante))/(2*a);
+                alert(`solucion 1:${x1}
+                solucion 2: ${x2}  `)
+            }else if (discriminante===0){
+                let x=-b/(2*a);
+                alert(`solucion${x}`)
+            }else{
+                alert(`no tiene solucion, el discriminante es negativo ${discriminante}`);
+            }
+
+        }
+        calculo(a,b,c)
+    </script>
+</body>
+</html>

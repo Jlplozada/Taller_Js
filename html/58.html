@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        function signoZodiacal() {
+    let mes = prompt("Ingrese el nombre del mes:").toLowerCase();
+    if (mes === "enero" || mes === "febrero") {
+        alert("Tu signo es Acuario o Piscis, dependiendo del día.");
+    } else if (mes === "marzo" || mes === "abril") {
+        alert("Tu signo es Aries o Tauro, dependiendo del día.");
+    } else if (mes === "mayo" || mes === "junio") {
+        alert("Tu signo es Géminis o Cáncer, dependiendo del día.");
+    } else if (mes === "julio" || mes === "agosto") {
+        alert("Tu signo es Leo o Virgo, dependiendo del día.");
+    } else if (mes === "septiembre" || mes === "octubre") {
+        alert("Tu signo es Libra o Escorpio, dependiendo del día.");
+    } else if (mes === "noviembre" || mes === "diciembre") {
+        alert("Tu signo es Sagitario o Capricornio, dependiendo del día.");
+    } else {
+        alert("Mes no válido.");
+    }
+}
+signoZodiacal();
+
+    </script>
+</body>
+</html>

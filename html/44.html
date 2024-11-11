@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        function convertirMoneda() {
+    const DOLAR = 4500; 
+    const EURO = 5000;
+
+    let pesos = parseFloat(prompt("Ingrese la cantidad en pesos:"));
+
+    if (pesos >= 0) {
+        let enDolares = pesos / DOLAR;
+        let enEuros = pesos / EURO;
+        alert("Equivalente en dólares: $" + enDolares.toFixed(2) + "\nEquivalente en euros: €" + enEuros.toFixed(2));
+    } else {
+        alert("Valor inválido.");
+    }
+}
+convertirMoneda();
+
+    </script>
+</body>
+</html>

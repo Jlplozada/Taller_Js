@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+       function obtenerPromedioYVerificar(calificaciones) {
+    let suma = 0;
+    let hayCalificacionPerfecta = false;
+
+    calificaciones.forEach(calificacion => {
+        suma += calificacion;
+        if (calificacion === 5.0) {
+            hayCalificacionPerfecta = true;
+        }
+    });
+
+    const promedio = suma / calificaciones.length;
+
+    if (hayCalificacionPerfecta) {
+        console.log("¡Excelente! Obtuviste una calificación perfecta en al menos un examen.");
+    }
+    return promedio.toFixed(2);
+}
+
+const calificacionesEstudiante = [4.5, 3.8, 4.0, 5.0];
+const promedio = obtenerPromedioYVerificar(calificacionesEstudiante);
+console.log(`El promedio de las calificaciones es: ${promedio}`);
+
+    </script>
+</body>
+</html>

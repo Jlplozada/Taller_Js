@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        function pedirEdad() {
+            let edad = prompt("Por favor, ingresa tu edad:");
+                while (!edad || isNaN(edad) || edad <= 0) {
+                edad = prompt("Por favor, ingresa un número válido (mayor que 0):");
+            }
+            edad = Number(edad);
+            if (edad >= 18) {
+                alert("Eres mayor de edad.");
+            } else {
+                alert("Eres menor de edad.");
+            }
+        }
+
+        pedirEdad();
+    </script>
+</body>
+</html>

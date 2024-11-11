@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        function mostrarTriangulo() {
+    let altura = parseInt(prompt("Ingrese un número entero para la altura del triángulo:"));
+
+    if (altura > 0) {
+        for (let i = 1; i <= altura; i++) {
+            let linea = "*".repeat(i);
+            console.log(linea);
+        }
+    } else {
+        alert("Número inválido.");
+    }
+}
+mostrarTriangulo();
+
+    </script>
+</body>
+</html>

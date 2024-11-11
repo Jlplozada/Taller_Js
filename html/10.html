@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        let pizza = parseInt(prompt(`
+        1.pizza vegetariana
+        2.pizza no vegetariana
+        `));
+
+        let ingredientes,
+        ingredientesExtra,
+        comprobarEleccion=true,
+        tipoPizza;
+        if (pizza<=0 || pizza >=3) {
+            alert("valor invalido")
+        } else {
+            if(pizza==1){
+                    tipoPizza="Vegetariana";
+                    while (comprobarEleccion) {
+                    ingredientes=parseInt(prompt(`
+                    1.pimiento
+                    2.tofu
+                    ingrese su opcion (Numero)
+                     `));
+                    if (ingredientes===1) {
+                        ingredientesExtra="pimiento";
+                        comprobarEleccion=false;
+                   }else if (ingredientes===2){
+                        ingredientesExtra="tofu";
+                        comprobarEleccion=false;
+                    }else{
+                        alert ("valor invalido");
+                    }
+
+                }
+            }else if (pizza ==2) {
+                tipoPizza="No vegetariana";
+                while(comprobarEleccion){
+                    ingredientes=parseInt(prompt(`
+                    1.peperoni
+                    2.jamon
+                    3.salmon
+                    `));
+                    if (ingredientes !==1 && ingredientes !==2 && ingredientes !==3) {
+                        alert("No eligio ningun ingrediente valido");
+                    }else if(ingredientes===1){
+                        ingredientesExtra="peperoni";
+                    }else if(ingredientes===2){
+                        ingredientesExtra="jamon";
+                    }else {
+                        ingredientesExtra="salmon";
+                    }
+                    
+                }
+            }
+            alert
+
+        }
+    </script>
+</body>
+</html>

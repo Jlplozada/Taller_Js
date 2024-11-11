@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        function verificarAlarma() {
+    let temperatura = parseFloat(prompt("Ingrese la temperatura:"));
+    let presion = parseFloat(prompt("Ingrese la presión:"));
+
+    if (presion > 200 || temperatura > 100) {
+        alert("Alarma");
+    } else {
+        alert("Todo está en rango normal.");
+    }
+}
+verificarAlarma();
+
+    </script>
+</body>
+</html>

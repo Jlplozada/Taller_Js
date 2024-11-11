@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+       function verificarFortalezaContrasena(contrasena) {
+    if (contrasena.length < 8 || contrasena.length > 12) {
+        return 'La contraseña debe tener entre 8 y 12 caracteres.';
+    }
+
+    let tieneMayuscula = /[A-Z]/.test(contrasena);
+    let tieneMinuscula = /[a-z]/.test(contrasena);
+    let tieneDigito = /\d/.test(contrasena);
+    let tieneEspecial = /[!@#\$%\^&\*]/.test(contrasena);
+
+    if (!tieneMayuscula) return 'Debe incluir al menos una letra mayúscula.';
+    if (!tieneMinuscula) return 'Debe incluir al menos una letra minúscula.';
+    if (!tieneDigito) return 'Debe incluir al menos un dígito.';
+    if (!tieneEspecial) return 'Debe incluir al menos un carácter especial para mayor seguridad.';
+
+    return 'Contraseña segura.';
+}
+
+const contrasenas = ['Abc12345!', 'abcdef', 'ABC12345', 'Abcdef12', 'Abcdef12#'];
+contrasenas.forEach((contrasena, index) => {
+    console.log(`Contraseña ${index + 1}: ${contrasena}`);
+    console.log(verificarFortalezaContrasena(contrasena));
+    console.log('---');
+});
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

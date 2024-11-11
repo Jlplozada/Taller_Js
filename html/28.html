@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        let nombre = prompt("nombre");
+        let horasTrabajadas = parseFloat(prompt("horas trabajadas")); 
+        let pagoPorHora = parseFloat("pago por h"); 
+function calcularSueldo(horasTrabajadas, pagoPorHora) {
+    let horasExtras = 0;
+    if (horasTrabajadas > 40) {
+        horasExtras = horasTrabajadas - 40; 
+    }
+    
+    const sueldoBase = 40 * pagoPorHora;
+    const pagoHorasExtras = horasExtras * pagoPorHora * 1.5;
+    if (horasTrabajadas <= 40) {
+        return horasTrabajadas * pagoPorHora;
+    } else {
+        return sueldoBase + pagoHorasExtras;
+    }
+}
+
+function mostrarInformacion(nombre, horasTrabajadas, pagoPorHora) {
+    console.log(`Empleado: ${nombre}`);
+    
+    console.log(`Horas trabajadas: ${horasTrabajadas}`);
+    
+    console.log(`Pago por hora: $${pagoPorHora}`);
+    
+    console.log(`Sueldo total: $${calcularSueldo(horasTrabajadas, pagoPorHora)}`);
+}
+
+mostrarInformacion(nombre, horasTrabajadas, pagoPorHora);
+    </script>
+</body>
+</html>

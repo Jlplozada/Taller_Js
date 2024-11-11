@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        let distancia=parseFloat(prompt("distancia en Km"));
+        let tiempo=parseFloat(prompt("tiempo en minutos"));
+        function calculo(d,t) {
+            let distanciaEnMetros=d*1000;
+            let tiempoEnSegundos=t*60;
+            let velocidad=distanciaEnMetros/tiempoEnSegundos;
+            alert(`la velocidad es ${velocidad} M/s`);
+        }
+        calculo(velocidad)
+    </script>
+</body>
+</html>

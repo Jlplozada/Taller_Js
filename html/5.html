@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejercicios">
+        <ul>
+            <li><a href="../index.html">volver</a></li>
+        </ul>
+    </div>
+    <script>
+        let edad = parseInt(prompt("ingrese su edad"));
+        let ingreso = parseFloat(prompt("ingrese sus ingresos"));
+        if (edad<0|| ingreso<0) {
+            alert("valores invalidos");
+        } else {
+            if (edad>16 && ingreso >=10000) {
+                alert("debe tributar");
+            }else{
+                alert("no debe tributar");
+            }
+            
+        }
+
+    </script>
+</body>
+</html>
